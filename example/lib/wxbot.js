@@ -43,7 +43,7 @@ class WxBot extends Wechat {
 
   _tuning (word) {
     let params = {
-      'key': '2ba083ae9f0016664dfb7ed80ba4ffa0',
+      'key': '4cadd126886d67d433c814a2bdfd215c',
       'info': word
     }
     return this.request({
@@ -53,7 +53,7 @@ class WxBot extends Wechat {
     }).then(res => {
       let data = res.data
       if (data.code === 100000) {
-        return data.text + '[微信机器人]'
+        return data.text 
       }
       throw new Error('tuning返回值code错误', data)
     }).catch(err => {
